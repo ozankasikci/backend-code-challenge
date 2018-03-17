@@ -1,4 +1,10 @@
 'use strict';
+const path = require('path');
+
+global.rootRequire = function (module) {
+  const root = __dirname + './../';
+  return require(path.join(root, module));
+};
 
 const loopback = require('loopback');
 const boot = require('loopback-boot');

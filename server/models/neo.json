@@ -1,13 +1,12 @@
 {
   "name": "NEO",
   "plural": "NEO",
-  "base": "PersistedModel",
-  "idInjection": true,
+  "base": "Entity",
   "options": {
     "validateUpsert": true
   },
   "http": {
-    "path": "nasa"
+    "path": "neo"
   },
   "properties": {
     "date": {
