@@ -1,7 +1,5 @@
 'use strict';
 
-const pify = require('pify');
-
 module.exports = function(NEO) {
 
   NEO.hazardous = () => {
@@ -27,6 +25,7 @@ module.exports = function(NEO) {
     return NEO.findBestPart('month', hazardous);
   };
 
+  // generic function to be able fetch best month, year, day etc.
   NEO.findBestPart = (datePart, hazardous) => {
     const mongodb = NEO.dataSource.connector.db;
 

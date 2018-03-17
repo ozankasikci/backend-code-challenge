@@ -14,17 +14,22 @@ module.exports = function(Nasa) {
     };
 
     const saveNEORecords = () => {
-      const nearEarthObjects = [];
       const { near_earth_objects } = response;
+
+      // collect near earch object to be saved
+      const nearEarthObjects = [];
       _.forEach(near_earth_objects, (dateGroup, date) => {
 
         dateGroup.forEach(neo => {
+          // this variable looks like it might cause undefined errors
+          // better getting it using lodash
           const speed = _.get(neo, 'close_approach_data[0].relative_velocity.kilometers_per_hour');
+
           const neoObject = {
             date,
-            reference: neo.neo_reference_id,
-            name: neo.name,
             speed,
+            name: neo.name,
+            reference: neo.neo_reference_id,
             isHazardous: neo.is_potentially_hazardous_asteroid,
           };
 
@@ -32,6 +37,7 @@ module.exports = function(Nasa) {
         });
       });
 
+      // bulk insert them
       return NEO.create(nearEarthObjects);
     };
 
