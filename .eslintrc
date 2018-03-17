@@ -10,6 +10,7 @@
     "padded-blocks": 0,
     "no-undef": 0,
     "camelcase": 0,
+    "brace-style": 0,
     "max-len": ["error", 100]
   }
 }

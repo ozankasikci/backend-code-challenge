@@ -1,5 +1,6 @@
 'use strict';
 const axios = require('axios');
+const errors = rootRequire('server/errors');
 
 const NASA_BASE_URL = 'https://api.nasa.gov/';
 const NASA_NEO_ENDPOINT = `${NASA_BASE_URL}neo/rest/v1/feed`;
@@ -13,7 +14,7 @@ const fetchNEORecordsInRange = (startDate, finishDate) => {
 
   return axios.get(url)
     .then(res => res.data)
-    .catch(err => Promise.reject('Failed to fetch NEO records!'));
+    .catch(err => Promise.reject(errors.NasaApi.failedToFetchNEORecords));
 };
 
 module.exports = {
