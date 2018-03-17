@@ -14,11 +14,15 @@ describe('Nasa', function () {
 
       it('should be able save fetched neo records', async function () {
         const records = await Nasa.saveNEORecordsInRange('2018-03-14', '2018-03-17');
-        const recordIds = records.map(r => r.id);
 
+        // ensure returned records are of NEO type
+        records.every(r => expect(r).to.be.an.instanceOf(NEO));
+
+        const recordIds = records.map(r => r.id);
         const neoFilter = { where: { id: { inq: recordIds } } };
         const neoRecords = await NEO.find(neoFilter);
 
+        // expect all records to be saved in the database
         expect(neoRecords.length).to.equal(recordIds.length);
       });
     });
