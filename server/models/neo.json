@@ -1,0 +1,33 @@
+{
+  "name": "NEO",
+  "plural": "NEO",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "http": {
+    "path": "nasa"
+  },
+  "properties": {
+    "date": {
+      "type": "string",
+      "required": true,
+      "default": "name"
+    },
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "speed": {
+      "type": "number"
+    },
+    "isHazardous": {
+      "type": "boolean"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

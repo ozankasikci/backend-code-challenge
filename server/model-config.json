@@ -24,5 +24,9 @@
   "Entity": {
     "dataSource": null,
     "public": false
+  },
+  "NEO": {
+    "dataSource": "mem",
+    "public": true
   }
 }

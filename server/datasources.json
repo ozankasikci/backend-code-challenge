@@ -1,1 +1,6 @@
-{}
+{
+  "mem": {
+    "name": "mem",
+    "connector": "memory"
+  }
+}
