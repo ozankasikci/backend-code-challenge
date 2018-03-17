@@ -7,30 +7,23 @@
   },
   "mixins": {},
   "properties": {
-    "deleted": {
-      "type": "boolean",
-      "required": true,
-      "default": false
-    },
     "createdAt": {
       "type": "date",
       "required": false,
       "defaultFn": "now"
     },
-    "updatedAt": {
-      "type": "date",
-      "required": false,
-      "defaultFn": "now"
-    },
-    "createdBy": {
+    "id": {
       "type": "string",
+      "id": true,
       "required": false,
-      "length": 36
-    },
-    "updatedBy": {
-      "type": "string",
-      "required": false,
-      "length": 36
+      "length": 36,
+      "defaultFn": "uuid",
+      "postgresql": {
+        "columnName": "id",
+        "dataType": "char",
+        "dataLength": 36,
+        "nullable": "NO"
+      }
     }
   },
   "validations": [],

@@ -13,10 +13,6 @@
     "dataSource": null,
     "public": false
   },
-  "Entity": {
-    "dataSource": null,
-    "public": false
-  },
   "Nasa": {
     "dataSource": null,
     "public": true
