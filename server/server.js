@@ -1,6 +1,7 @@
 'use strict';
 const path = require('path');
 
+// to be able to require from project path
 global.rootRequire = function (module) {
   const root = __dirname + './../';
   return require(path.join(root, module));

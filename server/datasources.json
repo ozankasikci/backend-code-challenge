@@ -2,5 +2,15 @@
   "mem": {
     "name": "mem",
     "connector": "memory"
+  },
+  "mongodb": {
+    "host": "localhost",
+    "port": 27017,
+    "url":  "",
+    "database": "backend_challenge",
+    "password": "",
+    "name": "mongodb",
+    "user": "",
+    "connector": "mongodb"
   }
 }

@@ -10,7 +10,7 @@
   },
   "properties": {
     "date": {
-      "type": "string",
+      "type": "date",
       "required": true,
       "default": "name"
     },
