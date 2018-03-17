@@ -1,0 +1,8 @@
+{
+  "extends": "loopback",
+  "rules": {
+    "object-curly-spacing": 0,
+    "space-before-function-paren": 0,
+    "padded-blocks": 0
+  }
+}
