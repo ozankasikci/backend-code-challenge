@@ -49,7 +49,6 @@ module.exports = function(NEO) {
         }
 
         cursor.toArray(function (err, documents) {
-          console.log(documents);
           resolve(documents);
         });
       };
