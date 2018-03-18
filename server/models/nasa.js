@@ -22,7 +22,7 @@ module.exports = function(Nasa) {
 
         dateGroup.forEach(neo => {
           // this variable looks like it might cause undefined errors
-          // better getting it using lodash
+          // better getting it using lodash.get
           const speed = _.get(neo, 'close_approach_data[0].relative_velocity.kilometers_per_hour');
 
           const neoObject = {

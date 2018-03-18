@@ -4,7 +4,7 @@
     "connector": "memory"
   },
   "mongodb": {
-    "host": "localhost",
+    "host": "mongo",
     "port": 27017,
     "url":  "",
     "database": "backend_challenge",

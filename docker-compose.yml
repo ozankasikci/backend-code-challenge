@@ -1,0 +1,27 @@
+version: '3'
+services:
+
+  backend-challenge:
+    container_name: backend-challenge-node
+    environment:
+      - NODE_ENV
+      - NODE_PORT
+      - DB_HOST
+      - DB_USER
+      - DB_PASSWORD
+    ports:
+      - "9005:9005"
+    build:
+      context: ./
+      dockerfile: ./Dockerfile
+    links:
+      - mongo
+  mongo:
+    container_name: mongo
+    image: mongo
+    volumes:
+      - ./data:/data/db
+    ports:
+      - "27017:27017"
+
+
