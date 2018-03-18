@@ -101,7 +101,7 @@ describe('NEO', function () {
     });
 
     describe('when the request is invalid', function () {
-      it('should fail to fetch fastest neo record', async function () {
+      it('should fail to fetch the best year for the neo records', async function () {
         const sandbox = sinon.sandbox.create();
 
         try {
@@ -141,7 +141,7 @@ describe('NEO', function () {
       });
 
       describe('when the request is invalid', function () {
-        it('should fail to fetch fastest neo record', async function () {
+        it('should fail to fetch best month for neo records', async function () {
           const sandbox = sinon.sandbox.create();
 
           try {
