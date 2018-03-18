@@ -14,7 +14,7 @@ I've used node:carbon as base image, that is an LTS version. Used a mongodb cont
 
 ## Tests
 I've used mocha, chai, and sinon. Note that tests need a local mongodb server.
-Run npm test, it will start mocha with proper NODE_ENV env varibale and timeout value.
+Run npm test, it will start mocha with proper NODE_ENV env variable and timeout value.
 
 Note: I haven't used chai as promised on purpose, i feel like there is no need to bring in an extra dependency, when i can do the same thing with plain old try catch.
 
