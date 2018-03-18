@@ -47,7 +47,7 @@ module.exports = function(Nasa) {
 
 
   Nasa.remoteMethod('saveNEORecordsInRange', {
-    http: {path: '/saveNEORecordsInRange', verb: 'get', status: 200},
+    http: {path: '/saveNEORecordsInRange', verb: 'post', status: 200},
     accepts: [
       { arg: 'startDate',
         type: 'string',
