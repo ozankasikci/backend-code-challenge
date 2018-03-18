@@ -26,6 +26,8 @@ module.exports = function(NEO) {
   };
 
   // generic function to be able fetch best month, year, day etc.
+  // previous methods was simple enough for loopback handle
+  // here we need to grab the mongodb client and apply aggregation.
   NEO.findBestPart = (datePart, hazardous) => {
     const mongodb = NEO.dataSource.connector.db;
 
@@ -59,6 +61,7 @@ module.exports = function(NEO) {
   NEO.remoteMethod('hazardous', {
     http: { path: '/hazardous', verb: 'get', status: 200 },
     returns: { root: true, type: 'object' },
+    description: 'Fetches hazardous near earth objects.',
   });
 
   NEO.remoteMethod('fastest', {
@@ -67,6 +70,7 @@ module.exports = function(NEO) {
     ],
     http: { path: '/fastest', verb: 'get', status: 200 },
     returns: { root: true, type: 'object' },
+    description: 'Fetches fastest near earth objects.',
   });
 
   NEO.remoteMethod('bestYear', {
@@ -75,6 +79,7 @@ module.exports = function(NEO) {
     ],
     http: { path: '/best-year', verb: 'get', status: 200 },
     returns: { root: true, type: 'object' },
+    description: 'Fetches the year with most near earth objects.',
   });
 
   NEO.remoteMethod('bestMonth', {
@@ -83,5 +88,6 @@ module.exports = function(NEO) {
     ],
     http: { path: '/best-month', verb: 'get', status: 200 },
     returns: { root: true, type: 'object' },
+    description: 'Fetches the month with most near earth objects.',
   });
 };
