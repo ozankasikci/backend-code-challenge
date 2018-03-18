@@ -7,6 +7,10 @@ const NASA_NEO_ENDPOINT = `${NASA_BASE_URL}neo/rest/v1/feed`;
 const NASA_API_KEY = 'N7LkblDsc5aen05FJqBQ8wU4qSdmsftwJagVK7UD';
 
 const fetchNEORecordsInRange = (startDate, finishDate) => {
+  if (!startDate || !finishDate) {
+    return Promise.reject(errors.Generic.missingParameter('start date, finish date'));
+  }
+
   const queryParams = `start_date=${startDate}&finish_date=${finishDate}` +
     `&api_key=${NASA_API_KEY}`;
 

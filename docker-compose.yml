@@ -1,6 +1,5 @@
 version: '3'
 services:
-
   backend-challenge:
     container_name: backend-challenge-node
     environment:

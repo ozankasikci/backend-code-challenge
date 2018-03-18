@@ -24,7 +24,19 @@ describe('NasaApi', function () {
         }
 
         catch (e) {
-          expect(e).to.equal(errors.NasaApi.failedToFetchNEORecords);
+          const expectedError = errors.Generic.missingParameter('start date, finish date');
+          expect(e).to.be.an('error').that.has.property('message', expectedError.message);
+        }
+      });
+
+      it('should fail to fetch and record neo data when the dates are invalid type', async function () {
+        try {
+          await NasaApi.fetchNEORecordsInRange(1234, 'asdf');
+        }
+
+        catch (e) {
+          const expectedError = errors.NasaApi.failedToFetchNEORecords;
+          expect(e).to.be.an('error').that.has.property('message', expectedError.message);
         }
       });
     });

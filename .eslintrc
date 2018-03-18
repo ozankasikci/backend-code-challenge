@@ -12,6 +12,6 @@
     "camelcase": 0,
     "brace-style": 0,
     "no-multiple-empty-lines": 0,
-    "max-len": ["error", 100]
+    "max-len": ["error", 120]
   }
 }

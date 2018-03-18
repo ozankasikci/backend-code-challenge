@@ -1,6 +1,9 @@
 'use strict';
 
 module.exports = {
+  Generic: {
+    missingParameter: param => new Error(`Parameter missing. (${param})`),
+  },
   NasaApi: {
     failedToFetchNEORecords: new Error('Failed to fetch NEO records!'),
   },
