@@ -8,7 +8,7 @@
   "scripts": {
     "lint": "eslint .",
     "start": "node .",
-    "test": "mocha -t 60000",
+    "test": "NODE_ENV=test mocha -t 60000",
     "posttest": "npm run lint && nsp check"
   },
   "dependencies": {
