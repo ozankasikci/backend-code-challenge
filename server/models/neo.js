@@ -88,6 +88,6 @@ module.exports = function(NEO) {
     ],
     http: { path: '/best-month', verb: 'get', status: 200 },
     returns: { root: true, type: 'object' },
-    description: 'Fetches the month with most near earth objects.',
+    description: 'Fetches the monthwith most near earth objects.',
   });
 };
