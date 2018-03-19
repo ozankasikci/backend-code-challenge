@@ -1,5 +1,5 @@
 # Basic Backend Developer Interview
-To run the api, simply `docker-compose up`
+To run the api and mongodb, simply `docker-compose up`
 
 To run the tests, `npm test`
 
