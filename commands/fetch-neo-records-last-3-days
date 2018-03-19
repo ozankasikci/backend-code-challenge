@@ -1,0 +1,18 @@
+#!/usr/bin/env node
+'use strict';
+
+const app = require('../server/server');
+const moment = require('moment');
+
+const { Nasa } = app.models;
+const today = moment().format('YYYY-MM-DD');
+const threeDaysEarlier = moment().subtract(3, 'days').format('YYYY-MM-DD');
+
+
+Nasa.saveNEORecordsInRange(today, threeDaysEarlier)
+  .then(res => {
+    console.log('Saved NEO records for last three days.');
+    console.log(res);
+  });
+
+
