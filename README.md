@@ -1,7 +1,4 @@
 # Basic Backend Developer Interview
-
-Hi, the test was fun doing it :)
-
 To run the api, simply `docker-compose up`
 
 To run the tests, `npm test`
