@@ -18,4 +18,4 @@ Run npm test, it will start mocha with proper NODE_ENV env variable and timeout 
 Note: I haven't used chai as promised on purpose, i feel like there is no need to bring in an extra dependency, when i can do the same thing with plain old try catch.
 
 ## Eslint
-I've used eslint to keep the consistent throughout the codebase.
+I've used eslint to keep the code consistent throughout the codebase.
